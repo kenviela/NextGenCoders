@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Explorar Contenido Solar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f2cc0d",
+              "background-light": "#ffffff",
+              "background-dark": "#221f10",
+              "text-light": "#181711",
+              "text-dark": "#f8f8f5",
+              "text-muted-light": "#8a8360",
+              "text-muted-dark": "#a8a284",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5 sm:px-10 md:px-20 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f0f0] dark:border-b-background-dark px-4 sm:px-10 py-3">
+<a class="flex items-center gap-4 text-text-light dark:text-text-dark" href="#">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Nextgen Coders</h2>
+</a>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Calculadora</a>
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary transition-colors" href="#">Más información</a>
+<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="#">Explorar</a>
+</div>
+</div>
+</header>
+<main>
+<div class="flex flex-wrap justify-between gap-3 p-4 py-10 sm:p-8">
+<div class="flex w-full flex-col gap-3">
+<h1 class="text-text-light dark:text-text-dark text-4xl sm:text-5xl font-black leading-tight tracking-[-0.033em]">Descubre el Mundo Solar</h1>
+<p class="text-text-muted-light dark:text-text-muted-dark text-base font-normal leading-normal max-w-2xl">Explora diferentes facetas de la energía solar y su impacto en nuestro mundo a través de nuestras categorías de contenido.</p>
+</div>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4 p-4 sm:p-6">
+<a class="group" href="#">
+<div class="bg-cover bg-center flex flex-col rounded-xl justify-end p-5 aspect-[4/3] overflow-hidden relative transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="Solar panels on a modern rooftop under a clear blue sky" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtag5Fh0PCYGUyliAuItSRE4Q9aAK05NdyClzMJvVFDlIUWn_qnc2Na9kzqNn0qiXpyWF4bwYEhS6hS5pG_NKvvTRCB4jJgLXnuNVLED50IZ_W-4J6Djo47occxp0zsG8anM7z8wMzSIgu-Q3252QfHCiIKTfekVuYkloZ6gNb70sBPH0dTlvlO-eLdc5YmuslAk2oEgr2xvutlDVuZoiqfKirKAPKVZbj1Y3jYAJW0Q2Fy3VXI_329QwqhpI3WMmhNxdlXasM2qMJ");'>
+<h3 class="text-white text-xl font-bold leading-tight">Tecnologías Solares</h3>
+<p class="text-white/80 text-sm font-normal leading-normal mt-1">Descubre los tipos de paneles, inversores y baterías.</p>
+</div>
+</a>
+<a class="group" href="#">
+<div class="bg-cover bg-center flex flex-col rounded-xl justify-end p-5 aspect-[4/3] overflow-hidden relative transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="A large-scale solar farm in a desert landscape at sunset" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuANgkB4JpyT92alEexH53-pmu22AvgYownRST0elRnkO95GO4JUYJac_FMjc1GINC3J5DVYYcKw6uk5wTgb-lsUE9XJyq11fiPDwGu6jFaBEtMbI6h8-RCZJG2NVp7JtCrsSQbyIlHx6lBYsPw104mwNjJrpcPe5ABQWLkDF9Ihx6cHPSaAXYWYIHKbhaYnCVP_zUKW7Szaw38LQwNgafL_fcGNqeil1mX0QtyxmrsBtRezoG1TGexrXvwglD3pnGRcpeUltgrZIt2P");'>
+<h3 class="text-white text-xl font-bold leading-tight">Proyectos Destacados</h3>
+<p class="text-white/80 text-sm font-normal leading-normal mt-1">Casos de éxito a gran escala y residenciales.</p>
+</div>
+</a>
+<a class="group" href="#">
+<div class="bg-cover bg-center flex flex-col rounded-xl justify-end p-5 aspect-[4/3] overflow-hidden relative transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="Abstract image of light streaks representing news and data flow" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNX57eTMamkcgURc0LkzbNPNuDInGZZz9Ks__8lu0LcgOsdpwSqsa4Ek1W-ld2sGWHx1etfesA49zCIhvCBTitq6SDGeszZBw3xYeJqHZO0t04phRkjgnZTD7fuMGdc1lGPdXC1wbNgTq4k-w2oCVRba_1j-ABs2IJTQtEmCzZdcpD5aZaVaFtvePNkbqn0Le9POtFiKb9hCjHLnDeoHWR3Swd18_0EOY3hscmq3UlbgtICayFnZt0U-cxUGgksiXBrraQSFoDtowx");'>
+<h3 class="text-white text-xl font-bold leading-tight">Noticias y Tendencias</h3>
+<p class="text-white/80 text-sm font-normal leading-normal mt-1">Las últimas innovaciones y movimientos del mercado.</p>
+</div>
+</a>
+<a class="group" href="#">
+<div class="bg-cover bg-center flex flex-col rounded-xl justify-end p-5 aspect-[4/3] overflow-hidden relative transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="Lush green forest with sunbeams shining through the trees" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDoviBYrCteBu_eYLTAcfsNC67hEkAgiEiKOcyw0V1vZYJSacGUdQuzQs6ly3AIGhqnzhwZ0K5mnWtfA0TtSpNffRhe239gKPDxj-_oHIFnkCXIVufkMcgmhQvdpRF4GIcP-jlUXwxzrajW9IpKOsa8-fiMsdDIc123d2EXowOzCiwEg7offx3duZvvsdAHadQs2dINnb-VCqoC-Fg9-f3fkiRljZrC2iGVKdHdMDgMJZ4Hq-tf86exHbCZ4m3MdVgVH-0MJbcyL-KJ");'>
+<h3 class="text-white text-xl font-bold leading-tight">Impacto Ambiental</h3>
+<p class="text-white/80 text-sm font-normal leading-normal mt-1">Efectos positivos de la adopción de energía solar.</p>
+</div>
+</a>
+<a class="group" href="#">
+<div class="bg-cover bg-center flex flex-col rounded-xl justify-end p-5 aspect-[4/3] overflow-hidden relative transition-transform duration-300 ease-in-out group-hover:scale-105" data-alt="A person reading a book with technical diagrams, representing a guide" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbXZVvlupdYDQk_-2ZB3lnrKmwOz9wXtZdaRomicp5SPV0pYvKPJsbzf8BwM6eyDzMWtIDLTezh5boLoOrTeFkQ00w77BGWdJHHNYM-41winXOwjCNrklqkXBLyOB2QjQXz2yz5hqAj1nltmCoA_nObGExhAAxxwhUHJ9Kw7ADAJym6RM2wH88CctSMLhRQhlYjaN5e0TSSmHMH70bDTIE7GaooScKc7lmV_ZorW1SFRfL27Uhfj0y6_0MMQB4p4ccZhBtEHY1ED_2");'>
+<h3 class="text-white text-xl font-bold leading-tight">Guías y Consejos</h3>
+<p class="text-white/80 text-sm font-normal leading-normal mt-1">Guías prácticas para empezar tu viaje solar.</p>
+</div>
+</a>
+</div>
+</main>
+<footer class="flex flex-col gap-8 px-5 pt-20 pb-10 text-center @container mt-10">
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm font-normal leading-normal">© 2024 Nextgen Coders. Todos los derechos reservados.</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

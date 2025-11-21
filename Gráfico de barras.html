@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Análisis de Producción Energética</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#fac638",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#231e0f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-5xl flex-1">
+<!-- Toolbar -->
+<div class="flex justify-between items-center gap-2 px-4 py-3">
+<div class="flex gap-2">
+<button class="flex items-center gap-2 p-2 text-[#212121] dark:text-background-light hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="hidden sm:inline text-sm font-medium">Volver al Dashboard</span>
+</button>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-[#212121] dark:text-background-light hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-2">
+<p class="text-[#212121] dark:text-background-light text-3xl md:text-4xl font-black leading-tight tracking-tight">Producción Energética Mensual</p>
+<p class="text-[#757575] dark:text-gray-400 text-base font-normal leading-normal">Datos correspondientes al último trimestre</p>
+</div>
+</div>
+<!-- Filters and Controls -->
+<div class="flex flex-wrap items-center justify-between gap-4 p-4 border-b border-gray-200 dark:border-gray-700">
+<div class="flex gap-3 overflow-x-auto pb-2">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/20 dark:bg-primary/30 px-4">
+<p class="text-[#212121] dark:text-background-light text-sm font-medium leading-normal">Último trimestre</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 px-4 transition-colors">
+<p class="text-[#212121] dark:text-background-light text-sm font-medium leading-normal">Últimos 30 días</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 px-4 transition-colors">
+<p class="text-[#212121] dark:text-background-light text-sm font-medium leading-normal">Último año</p>
+</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-[#212121] dark:text-background-light hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="p-2 text-[#212121] dark:text-background-light hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">zoom_out</span>
+</button>
+</div>
+</div>
+<!-- Chart -->
+<div class="flex flex-wrap gap-4 p-4">
+<div class="flex min-w-72 flex-1 flex-col gap-4 bg-white dark:bg-background-dark p-6 rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+<div>
+<p class="text-[#212121] dark:text-background-light text-lg font-medium leading-normal">Producción de Energía (kWh)</p>
+<p class="text-[#757575] dark:text-gray-400 text-sm font-normal">Oct - Dic 2023</p>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="text-[#212121] dark:text-background-light tracking-tight text-4xl font-bold leading-none">4,750 kWh</p>
+<p class="text-green-600 dark:text-green-500 text-base font-medium leading-normal">+5.8%</p>
+</div>
+</div>
+<!-- Interactive Chart Area -->
+<div class="relative grid min-h-[360px] w-full grid-cols-3 items-end gap-6 sm:gap-8 md:gap-12 px-3 pt-8 pb-6 border-b border-l border-gray-200 dark:border-gray-700">
+<!-- Y-Axis Labels -->
+<div class="absolute -left-10 top-0 bottom-6 flex flex-col justify-between text-right text-xs text-[#757575] dark:text-gray-400">
+<span>2000</span>
+<span>1500</span>
+<span>1000</span>
+<span>500</span>
+<span>0</span>
+</div>
+<!-- Bar Group: Octubre -->
+<div class="group relative flex h-full flex-col items-center justify-end gap-2">
+<div class="relative flex h-full w-full items-end gap-1">
+<div class="w-full bg-primary rounded-t-lg transition-all duration-300 group-hover:opacity-75" data-alt="Barra de la Planta Solar A para Octubre" style="height: 60%;"></div>
+<div class="w-full bg-[#FF5733] rounded-t-lg transition-all duration-300 group-hover:opacity-75" data-alt="Barra de la Planta Solar B para Octubre" style="height: 50%;"></div>
+</div>
+<!-- Tooltip -->
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 mb-2 w-max rounded-lg bg-[#212121] px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+<p>Planta A: 1200 kWh</p>
+<p>Planta B: 1000 kWh</p>
+</div>
+<p class="text-[#757575] dark:text-gray-400 text-sm font-medium leading-normal">Oct</p>
+</div>
+<!-- Bar Group: Noviembre -->
+<div class="group relative flex h-full flex-col items-center justify-end gap-2">
+<div class="relative flex h-full w-full items-end gap-1">
+<div class="w-full bg-primary rounded-t-lg transition-all duration-300 group-hover:opacity-75" data-alt="Barra de la Planta Solar A para Noviembre" style="height: 80%;"></div>
+<div class="w-full bg-[#FF5733] rounded-t-lg transition-all duration-300 group-hover:opacity-75" data-alt="Barra de la Planta Solar B para Noviembre" style="height: 70%;"></div>
+</div>
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 mb-2 w-max rounded-lg bg-[#212121] px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+<p>Planta A: 1600 kWh</p>
+<p>Planta B: 1400 kWh</p>
+</div>
+<p class="text-[#757575] dark:text-gray-400 text-sm font-medium leading-normal">Nov</p>
+</div>
+<!-- Bar Group: Diciembre -->
+<div class="group relative flex h-full flex-col items-center justify-end gap-2">
+<div class="relative flex h-full w-full items-end gap-1">
+<div class="w-full bg-primary rounded-t-lg transition-all duration-300 group-hover:opacity-75" data-alt="Barra de la Planta Solar A para Diciembre" style="height: 100%;"></div>
+<div class="w-full bg-[#FF5733] rounded-t-lg transition-all duration-300 group-hover:opacity-75" data-alt="Barra de la Planta Solar B para Diciembre" style="height: 95%;"></div>
+</div>
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 mb-2 w-max rounded-lg bg-[#212121] px-3 py-2 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
+<p>Planta A: 2000 kWh</p>
+<p>Planta B: 1900 kWh</p>
+</div>
+<p class="text-[#757575] dark:text-gray-400 text-sm font-medium leading-normal">Dic</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Legend / Description List -->
+<div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-3 border border-gray-200 dark:border-gray-700 p-4 rounded-xl bg-white dark:bg-background-dark">
+<div class="w-4 h-4 rounded-full bg-primary" data-alt="Indicador de color amarillo cálido"></div>
+<div>
+<p class="text-[#212121] dark:text-background-light text-sm font-medium leading-normal">Planta Solar A</p>
+<p class="text-[#757575] dark:text-gray-400 text-xs">Representado por barras de color amarillo cálido</p>
+</div>
+</div>
+<div class="flex items-center gap-3 border border-gray-200 dark:border-gray-700 p-4 rounded-xl bg-white dark:bg-background-dark">
+<div class="w-4 h-4 rounded-full bg-[#FF5733]" data-alt="Indicador de color naranja vibrante"></div>
+<div>
+<p class="text-[#212121] dark:text-background-light text-sm font-medium leading-normal">Planta Solar B</p>
+<p class="text-[#757575] dark:text-gray-400 text-xs">Representado por barras de color naranja vibrante</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

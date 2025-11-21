@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Desglose de Fuentes de Energía</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .pie-chart-slice:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+    .pie-chart-slice {
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#FFC300",
+            "background-light": "#FFFFFF",
+            "background-dark": "#1a1a1a",
+            "text-primary-light": "#2C3E50",
+            "text-secondary-light": "#85929E",
+            "text-primary-dark": "#E0E0E0",
+            "text-secondary-dark": "#A0A0A0",
+            "border-light": "#EAECEE",
+            "border-dark": "#333333",
+            "surface-light": "#F8F9F9",
+            "surface-dark": "#2C2C2C",
+            "solar-orange": "#FF5733",
+            "solar-blue": "#3498DB",
+            "solar-gray": "#5D6D7E"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-5xl">
+<div class="flex justify-between gap-2 px-4 py-5">
+<div class="flex gap-2">
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary/20 dark:bg-primary/30 text-text-primary-light dark:text-text-primary-dark hover:bg-primary/30 dark:hover:bg-primary/40 gap-2 text-sm font-semibold leading-normal tracking-[0.015em] min-w-0 px-4 transition-colors">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="truncate">Volver al Dashboard</span>
+</button>
+</div>
+</div>
+</header>
+<main class="px-4 sm:px-6 lg:px-8 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-5xl flex-1">
+<div class="text-center px-4">
+<h1 class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-3xl sm:text-4xl font-bold leading-tight pb-2 pt-6">Desglose de Fuentes de Energía</h1>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base sm:text-lg font-normal leading-normal">Desglose detallado de la generación de energía renovable para el T3.</p>
+</div>
+<div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 px-4 py-10 sm:py-16">
+<div class="relative w-full max-w-sm sm:max-w-md lg:max-w-lg aspect-square">
+<svg aria-label="Gráfico de torta mostrando el desglose de fuentes de energía: Solar Fotovoltaica 60%, Solar Térmica 20%, Importación de Red 15%, y Energía Almacenada 5%" class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="45" stroke="#EAECEE" stroke-width="10"></circle>
+<circle class="pie-chart-slice" cx="50" cy="50" data-slice="solar-pv" fill="none" r="45" stroke="url(#gradient-solar-pv)" stroke-dasharray="282.74" stroke-dashoffset="113.1" stroke-width="10"></circle>
+<circle class="pie-chart-slice" cx="50" cy="50" data-slice="solar-thermal" fill="none" r="45" stroke="url(#gradient-solar-thermal)" stroke-dasharray="282.74" stroke-dashoffset="169.65" stroke-width="10"></circle>
+<circle class="pie-chart-slice" cx="50" cy="50" data-slice="grid-import" fill="none" r="45" stroke="url(#gradient-grid-import)" stroke-dasharray="282.74" stroke-dashoffset="212.06" stroke-width="10"></circle>
+<circle class="pie-chart-slice" cx="50" cy="50" data-slice="stored-energy" fill="none" r="45" stroke="url(#gradient-stored)" stroke-dasharray="282.74" stroke-dashoffset="268.6" stroke-width="10"></circle>
+<defs>
+<linearGradient id="gradient-solar-pv" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#FFC300"></stop>
+<stop offset="100%" style="stop-color:#FFD700"></stop>
+</linearGradient>
+<linearGradient id="gradient-solar-thermal" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#FF5733"></stop>
+<stop offset="100%" style="stop-color:#FF8C66"></stop>
+</linearGradient>
+<linearGradient id="gradient-grid-import" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#3498DB"></stop>
+<stop offset="100%" style="stop-color:#5DADE2"></stop>
+</linearGradient>
+<linearGradient id="gradient-stored" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#5D6D7E"></stop>
+<stop offset="100%" style="stop-color:#85929E"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base font-medium">Total Generado</p>
+<p class="text-text-primary-light dark:text-text-primary-dark text-4xl sm:text-5xl font-bold tracking-tighter">1,250</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-base font-medium">kWh</p>
+</div>
+</div>
+<div class="w-full max-w-sm lg:max-w-xs flex flex-col gap-4">
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+<div class="w-3 h-3 rounded-full bg-[#FFC300]"></div>
+<div class="flex-1">
+<p class="font-semibold text-text-primary-light dark:text-text-primary-dark">Solar Fotovoltaica</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">750 kWh</p>
+</div>
+<p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">60%</p>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+<div class="w-3 h-3 rounded-full bg-[#FF5733]"></div>
+<div class="flex-1">
+<p class="font-semibold text-text-primary-light dark:text-text-primary-dark">Solar Térmica</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">250 kWh</p>
+</div>
+<p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">20%</p>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+<div class="w-3 h-3 rounded-full bg-[#3498DB]"></div>
+<div class="flex-1">
+<p class="font-semibold text-text-primary-light dark:text-text-primary-dark">Importación de Red</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">187.5 kWh</p>
+</div>
+<p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">15%</p>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+<div class="w-3 h-3 rounded-full bg-[#5D6D7E]"></div>
+<div class="flex-1">
+<p class="font-semibold text-text-primary-light dark:text-text-primary-dark">Energía Almacenada</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">62.5 kWh</p>
+</div>
+<p class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">5%</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
