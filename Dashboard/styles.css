@@ -1,0 +1,59 @@
+:root{
+  --primary: #FAC638;
+  --bg-light: #f8f8f5;
+  --bg-dark: #231e0f;
+  --card-bg: #ffffff;
+  --card-bg-dark: #23221b;
+}
+
+/* base */
+body {
+  background: var(--bg-light);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+.dark body {
+  background: var(--bg-dark);
+  color: #f7f7f3;
+}
+
+/* cards */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+.dark .card {
+  background: var(--card-bg-dark);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+
+/* drop area */
+.drop-area {
+  transition: border-color .18s ease, background-color .18s ease;
+}
+.drop-area.dragover {
+  border-color: var(--primary);
+  background: rgba(250,198,56,0.06);
+}
+
+/* buttons */
+button {
+  font-weight: 600;
+}
+
+/* small helper for legend dots like original */
+.size-3 { width: 10px; height: 10px; border-radius: 9999px; display:inline-block; }
+.text-primary { color: var(--primary); }
+.bg-primary { background: var(--primary); }
+
+/* chart container - prevents overflow */
+.chart-container {
+  position: relative;
+  height: 360px;
+  width: 100%;
+}
+
+/* responsive tweaks for canvas */
+@media (max-width: 640px) {
+  .chart-container { height: 260px; }
+}
